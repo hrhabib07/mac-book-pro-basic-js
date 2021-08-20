@@ -30,7 +30,7 @@
                         <div class="my-5">
                             <h5>Memory </h5>
                             <div class="list-group list-group-horizontal">
-                                <button id="default-cost" type="button"
+                                <button id="memory-default" type="button"
                                     class="list-group-item list-group-item-action">8GB unified memory
                                 </button>
                                 <button type="button" id="memory-increase"
@@ -41,14 +41,17 @@
                         <div class="my-5">
                             <h5>Storage </h5>
                             <div class="list-group list-group-horizontal">
-                                <button type="button" class="list-group-item list-group-item-action">256GB SSD
+                                <button id="storage-default" type="button"
+                                    class="list-group-item list-group-item-action">256GB SSD
                                     storage
 
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">512GB SSD storage
+                                <button type="button" id="storage-increase"
+                                    class="list-group-item list-group-item-action">512GB SSD storage
 
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">1TB SSD storage
+                                <button type="button" id="storage-more-increase"
+                                    class="list-group-item list-group-item-action">1TB SSD storage
 
                                 </button>
                             </div>
@@ -56,10 +59,12 @@
                         <div class="my-5">
                             <h5>Choose your delivery options </h5>
                             <div class="list-group list-group-horizontal">
-                                <button type="button" class="list-group-item list-group-item-action">Friday, August
+                                <button id="delivery-default" type="button"
+                                    class="list-group-item list-group-item-action">Friday, August
                                     25 Free Prime delivery
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">Monday,August
+                                <button type="button" id="delivery-increase"
+                                    class="list-group-item list-group-item-action">Monday,August
                                     25 Delivery charge $20
                                 </button>
                             </div>
@@ -72,7 +77,7 @@
                                     <tbody>
                                         <tr>
                                             <th scope="col">Best Price</th>
-                                            <th scope="col">$1299</th>
+                                            <th scope="col">$ <span id="best-cost">1299</span> </th>
                                         </tr>
                                         <tr>
                                             <th scope="col">Extra Memory Cost</th>
@@ -80,16 +85,16 @@
                                         </tr>
                                         <tr>
                                             <th scope="col">Extra Storage Cost</th>
-                                            <th scope="col">$0</th>
+                                            <th scope="col">$<span id="storage-cost">0</span> </th>
                                         </tr>
                                         <tr>
                                             <th scope="col">Delivery Charge</th>
-                                            <th scope="col">$0</th>
+                                            <th scope="col">$<span id="delivery-cost">0</span> </th>
                                         </tr>
                                     </tbody>
                                     <tr>
                                         <th scope="col">Total Price</th>
-                                        <th scope="col">$1299</th>
+                                        <th scope="col">$<span id="total-cost">1299</span> </th>
                                     </tr>
 
                                 </table>
