@@ -50,7 +50,9 @@ function updateTotal(){
     const deliveryPrice =getPrice('delivery-cost');
    
     const total = document.getElementById('total-cost')
-    total.innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;   
+    total.innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice; 
+    const getTotal = document.getElementById('discount');
+    getTotal.innerText = total.innerText;  
    
 };
 function getPrice(item){
@@ -58,3 +60,19 @@ function getPrice(item){
     const convertNumber = parseFloat(selectText.innerText);
     return convertNumber;
 };
+
+// promo code section
+document.getElementById('apply-code').addEventListener('click', function(){
+    const userInput = document.getElementById('promo-code');
+    const userInputValue = userInput.value;
+    if(userInputValue == 'stevekaku'){
+        const getTotal = document.getElementById('discount');
+        const totalPrice = parseInt(getTotal.innerText);
+        const discountPrice = totalPrice * .2;
+        const updatedTotal = totalPrice - discountPrice;
+        getTotal.innerText = updatedTotal;
+        userInput.value ='';
+    } else{
+        userInput.value ='';
+    }
+})
