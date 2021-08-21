@@ -66,12 +66,14 @@ document.getElementById('apply-code').addEventListener('click', function(){
     const userInput = document.getElementById('promo-code');
     const userInputValue = userInput.value;
     if(userInputValue == 'stevekaku'){
+        const applyPromo = document.getElementById('apply-code');
         const getTotal = document.getElementById('discount');
         const totalPrice = parseInt(getTotal.innerText);
         const discountPrice = totalPrice * .2;
         const updatedTotal = totalPrice - discountPrice;
         getTotal.innerText = updatedTotal;
         userInput.value ='';
+        applyPromo.disabled = true;
     } else{
         userInput.value ='';
     }
